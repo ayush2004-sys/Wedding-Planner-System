@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Booking Confirmation</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        text-align: center;
+        align-items: center; 
+    justify-content: center; 
+
+        margin: 0;
+        padding: 0;
+    }
+    .confirmation-container {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 50px auto;
+        max-width: 400px;
+    }
+    h2 {
+        color: #4CAF50;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 0 auto;
+        font-size: 24px;
+        animation: typingTitle 4s steps(40) forwards, fadeIn 2s forwards;
+    }
+    .success-text {
+        display: none;
+        animation: typingSuccess 4s steps(40) forwards, fadeIn 2s forwards;
+    }
+    p {
+        color: #333333;
+        font-size: 16px;
+    }
+    .tick-container {
+        position: relative;
+        display: inline-block;
+    }
+    .tick-mark {
+        color: #4CAF50;
+        font-size: 48px;
+        margin-bottom: 20px;
+        animation: rotate 2s ease-in-out forwards;
+    }
+    .logout-btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background-color 0.3s;
+        text-decoration:none;
+    }
+    .logout-btn:hover {
+        background-color: #FF0000;
+        
+    }
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes typingTitle {
+        from { width: 0 }
+        to { width: 100% }
+    }
+    @keyframes typingSuccess {
+        from { width: 0 }
+        to { width: 100% }
+    }
+    @keyframes fadeIn {
+        from { opacity: 0 }
+        to { opacity: 1 }
+    }
+</style>
+</head>
+<body>
+
+<div class="confirmation-container">
+    <div class="tick-container">
+        <div class="tick-mark">&#10004;</div>
+    </div>
+    <h2>Your wedding has been booked</h2>
+    <div class="success-text">
+        <h2>successfully!</h2>
+    </div>
+    <p>As soon as possible, we will contact you within 2 hours of working day.</p>
+    <a class="logout-btn" href="Logout.jsp">Logout</a>
+</div>
+
+<script>
+// JavaScript to display "successfully!" after a delay
+    setTimeout(function() {
+        document.querySelector('.success-text').style.display = 'block';
+    }, 2000);
+ /*   function logout() {
+        // Redirect to the home page
+        window.location.href = "index.html";
+    }*/
+</script>
+
+</body>
+</html>

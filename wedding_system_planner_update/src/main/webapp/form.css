@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+@keyframes letterAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Background Images */
+.hinduForm {
+  background-image: url('navratri-decoration-with-candles.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.muslimForm {
+  background-image: url('antique-gold-flower-light-candle.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.christianForm {
+  background-image: url('a.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.otherForm {
+  background-image: url('other_wedding.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Full Page Styling */
+.hinduForm, .muslimForm, .christianForm, .otherForm {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Title Styling */
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  margin-top: 30px;
+  opacity: 0;
+  animation: letterAppear 1s forwards;
+}
+
+/* Blurred Box for the Form */
+.form-container {
+  width: 500px;
+  padding: 25px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Transparent white */
+  backdrop-filter: blur(15px); /* Glassmorphism */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+/* Labels */
+label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 8px;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  width: calc(100% - 20px);
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2); /* Transparent input */
+  backdrop-filter: blur(5px);
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.02);
+}
+
+/* Buttons */
+input[type="submit"],
+input[type="reset"] {
+  width: 45%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="submit"] {
+  background: linear-gradient(135deg, #90EE90, #008000);
+  color: white;
+}
+
+input[type="reset"] {
+  background: linear-gradient(135deg, #FF7F7F, #FF0000);
+  color: white;
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(135deg, #008000, #32CD32);
+}
+
+input[type="reset"]:hover {
+  background: linear-gradient(135deg, #FF0000, #B22222);
+}
+
+/* Centering Buttons */
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
